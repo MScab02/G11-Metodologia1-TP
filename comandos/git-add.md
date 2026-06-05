@@ -12,10 +12,10 @@ Para esto, existen diferentes parámetros que se deben utilizar para realizar di
 El comando se utiliza de la siguiente forma en una terminal:
 
 ```
-git add [<parámetro>] [--] (ruta)
+git add [<parámetro>] [--] <ruta>
 ```
 
-### (ruta):
+### Ruta:
 
 En esta parte del comando, van los archivos a añadir al staging area.
 
@@ -30,35 +30,63 @@ La única excepción a este comando, son aquellos archivos que sean explícitame
 Estos son las opciones que se pueden escribir en el espacio de `[<parámetro>]` en la sintaxis del comando para ejecutar el comando de diferente manera y realizar distintas acciones relacioandas con la adición de los archivos al index.
 
 - `-A` `--all`
+
   Especificando este parámetro, hace que todos los cambios realizados se registren en el staging area: agrega archivos nuevos, modificados y eliminados.
+
 - `-u` `--update`
+
   Solo se agregan al staging area los archivos que ya se han rastreado previamente, deja de lado los archivos nuevos.
+
 - `-i` `--interactive`
+
   Permite gestionar los cambios a agregar al staging area de forma interactiva a través de un menú.
+
 - `-p` `--patch`
+
   Permite seleccionar y agregar fragmentos de archivos de forma interactiva, a modo de "parches".
+
 - `-e` `--edit`
+
   Permite editar manualmente el parche a agregar, similar a `--patch` pero de forma no interactiva y más precisa.
+
 - `-f` `--force`
+
   Permite saltarse las restricciones de `.gitignore`, añadiendo forzosamente estos archivos ignorados.
+
 - `-n` `--dry-run`
+
   Muestra los archivos que se van a agregar, sin agregarlos realmente. Funciona a modo de previsualización.
+
 - `-v` `--verbose`
+
   Muestra información detallada sobre los archivos que se están agregando al staging area.
+
 - `-h` `--help`
+
   Muestra estos comandos para ayudar al usuario a saber qué puede hacer el comando y cómo, a modo de ayuda.
+
 - `--refresh`
+
   Actualiza la información del staging area sin agregar cambios nuevos.
+
 - `--ignore-errors`
+
   Continúa agregando otros archivos en caso de encontrar errores, los archivos con errores los salta.
 
 ## Comandos similares
 
 - `git stage...`
+
   Realiza exactamente la misma función que `git add...`.
+
 - `git commit -a...`
+
   Similar a `git add -u...`, permitiendo actualizar los archivos ya trackeados.
+
 - `git update-index...`
+
   Es posible añadir archivos con el comando `git update-index --add...`, manipulando directamente el staging area, pero Git, de forma interna, ya usa mecanismos relacionados para implementar `git add...`. Resulta, al final, más complejo y menos intuitivo.
+
 - `git restore --staged...`
+
   Operación directamente inversa. Quita archivos del staging area sin perder los cambios realizados en el directorio de trabajo.
