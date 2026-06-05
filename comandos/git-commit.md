@@ -84,3 +84,13 @@ En `[<parámetro>]` se puede especificar diferentes opciones para "configurar" e
     Igual que `strip` en caso de que el mensaje vaya a ser editado, sino, actúa como `whitespace`.
 
 La parte de `[<ruta>]` permite commitear los archivos de la ruta especificada sin tener en cuenta los archivos que hayan en el index, pero estos no se pierden, sino que se mantienen en el index para un commit futuro.
+
+## Comandos similares
+
+- `git stash...`
+
+  Guarda los cambios de manera temporal sin crear un commit, útil para limpiar el área de trabajo y permitir cambiar de ramas.
+
+- `git revert...`
+
+  Deshace los cambios del commit anterior, creando un commit nuevo en el proceso para preservar el historial.
