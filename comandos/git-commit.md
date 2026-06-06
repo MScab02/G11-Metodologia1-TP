@@ -1,4 +1,4 @@
-# **2. git commit**
+# **6. git commit**
 
 ## Descripción
 
