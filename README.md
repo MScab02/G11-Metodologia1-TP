@@ -1,7 +1,43 @@
-# Trabájo práctico Git - Grupo 11
+# Trabajo práctico Git - Grupo 11
 
-El repositorio fue creado desde cero, por lo cual primero se clonó el repositorio de manera local con el comando `git clone (URL)`.
-Luego de acceder a la carpeta del repositorio y crear el archivo README, se creó la rama `main` con `git checkout -b main` para automáticamente pasar a dicha rama cuando se crea.
-Se añadió el archivo al staging area con `git add README.md`, se commiteó con `git commit -m "creación de README"` y se mandó los cambios al repositorio remoto, creando la rama `main` en el repositorio en el proceso, para esto se usó `git push -u origin main`.
+## Descripción
 
-Como este comentario se hizo luego de todo el proceso, ahora para actualizarlo, se repite el proceso de staging, commit y pusheo de los cambios.
+El desarrollo de este trabajo consiste en una serie de archivos de texto explicativos con información sobre los comandos de Git vistos en la materia de Metodología I, de la carrera Tecnicatura Universitaria de Programación en la UTN.
+
+## Estructura del proyecto
+
+El proyecto cuenta con una carpeta llamada `comandos`, dentro de la cual se encuentran los archivos explicativos, cada uno nombrado como el comando que se describe en su interior.
+
+Cuenta también con un archivo que contiene estadísticas relacionadas con el trabajo realizado en el repositorio y el uso de Git, llamado `estadisticas.md`, un archivo `ia.md` donde se documenta el uso de IA para la realización del proyecto, y un archivo `indice.md`, que incluye una breve introducción y un índice clickeable de los contenidos.
+
+```
+G11-Metodologia1-TP
+├ comandos
+│  ├ git-add.md
+│  ├ git-branch.md
+│  ├ git-checkout.md
+│  ├ git-clone.md
+│  ├ git-commit.md
+│  ├ git-conflictos.md
+│  ├ git-init.md
+│  ├ git-merge.md
+│  ├ git-pull.md
+│  ├ git-push.md
+│  ├ git-rebase.md
+│  ├ git-reset.md
+│  ├ git-revert.md
+│  └ git-status.md
+├ estadisticas.md
+├ ia.md
+├ indice.md
+└ README.md
+```
+
+## Integrantes
+
+El grupo 11 está conformado por:
+
+- Matías Carrizo
+- Nicolás Kloster
+- María Rodriguez
+- Matko Scabusso
