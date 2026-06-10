@@ -71,7 +71,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Lista las ramas que coinciden con un patron especificado. Si no se proporciona un patron, muestra todas las ramas locales.
 
 - `--show-current`
-  .
+  Muestra unicamente el nombre de la rama actual
 
 - `-v`, `-vv` y `--verbose`
   .
