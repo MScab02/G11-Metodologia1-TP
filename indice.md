@@ -29,4 +29,4 @@ A continuación se encuentran las explicaciones de los distintos comandos utiliz
 
 - Matías Carrizo
 - Matko Scabusso
--
+- Luciano Nicolas Kloster
