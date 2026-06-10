@@ -110,7 +110,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Muestra ramas cuyos punteros apuntan exactamente al objeto `<object>` especificado.
 
 - `--format <format>`
-  .
+  Permite personalizar el formato de salida utilizando especificadores de formato.
 
 - `<branch-name>`
   .
