@@ -83,10 +83,10 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Si el repositorio utiliza submodulos, crea ramas correspondientes tambien dentro de los submodulos
 
 - `--set-upstream`
-  .
+  Configura una rama remota como rama de seguimiento para la rama actual. Actualmente esta obsoleta, se recomienda usar `--set-upstream-to`.
 
 - `-u <upstream>` y `--set-upstream-to=<upstream>`
-  .
+  Establece la rama remota indicada en `<upstream>` como rama de seguimiento de la rama actual.
 
 - `--unset-upstream`
   .
