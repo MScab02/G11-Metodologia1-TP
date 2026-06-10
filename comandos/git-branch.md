@@ -7,52 +7,40 @@ El comando **`git branch`** se utiliza para verificar la rama en la que estas, m
 ## Sintaxis y parámetros
 
 - `-d` y `--delete`
-
-Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin fusionar en `HEAD` con --track o `--set-upstream-to`.
+  Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin fusionar en `HEAD` con --track o `--set-upstream-to`.
 
 - `--create-reflog`
-
-"reflog" significando registro de referencias en español, crea una bitacora de referencias que registra los cambios del puntero hasheadas con expresiones basadas en sha1 como `<branch-name>@{yesterday}`. En general, este comando no es necesario activarlo en git's que no son bare-bone debido a que esta activado naturalmente por default.
+  "reflog" significando registro de referencias en español, crea una bitacora de referencias que registra los cambios del puntero hasheadas con expresiones basadas en sha1 como `<branch-name>@{yesterday}`. En general, este comando no es necesario activarlo en git's que no son bare-bone debido a que esta activado naturalmente por default.
 
 - `-m` y `--move`
-
-Mueve o renombra una rama con su configuración y reflog.
+  Mueve o renombra una rama con su configuración y reflog.
 
 - `-c` y `--copy`
-
-Copia una rama con su configuración y reflog.
+  Copia una rama con su configuración y reflog.
 
 - `-f` y `--force`
-
-Reinicia `<branch-name>` hasta su `<start-point>`. Si se usa en combinacion con `-d` o `--delete` te permite borrar una rama ignorando el estado de union. en combinacion con `-m` o `--move` te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, `-c` o `--copy`.
+  Reinicia `<branch-name>` hasta su `<start-point>`. Si se usa en combinacion con `-d` o `--delete` te permite borrar una rama ignorando el estado de union. en combinacion con `-m` o `--move` te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, `-c` o `--copy`.
 
 - `-D`
-
-Atajo para `--delete --force`.
+  Atajo para `--delete --force`.
 
 - `-M`
-
-Atajo para `--move --force`
+  Atajo para `--move --force`
 
 - `-C`
-
-Atajo para `--copy --force`
+  Atajo para `--copy --force`
 
 - `--color[=<when>]`
-
-Colorea ramas para resaltar ramas activas, locales y remotas. El valor `[=<when>]` puede ser **always**, **auto** o **never**.
+  Colorea ramas para resaltar ramas activas, locales y remotas. El valor `[=<when>]` puede ser **always**, **auto** o **never**.
 
 - `--no-color`
-
-Elimina el color de las ramas de la misma forma que `--color=never`.
+  Elimina el color de las ramas de la misma forma que `--color=never`.
 
 - `-i --ignore-case`
-
-Es un parametro que te permite ignorar mayusculas filtrando ramas.
+  Es un parametro que te permite ignorar mayusculas filtrando ramas.
 
 - `--omit-empty`
-
-No imprime newline despues de referencias formateadas donde dicho formato se expande al string vacio.
+  No imprime newline despues de referencias formateadas donde dicho formato se expande al string vacio.
 
 - `--column[=<options>]` y `--no-column`
 
@@ -81,8 +69,9 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
 
 - `--abbrev=<n>`
   Muestra los identificadores SHA-1 abreviados con `<n>` caracteres.
+
 - `--no-abbrev`
-  .
+  Muestra los identificadores SHA-1 sin ser abreviados.
 
 - `-t --track[=(direct|inherit)]`
   .
