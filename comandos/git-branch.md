@@ -74,7 +74,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Muestra unicamente el nombre de la rama actual
 
 - `-v`, `-vv` y `--verbose`
-  .
+  Muestra informacion adicional sobre cada rama como el ultimo commit de la misma, -vv tambien muestra informacion sobre la rama remota vinculada
 
 - `-q` y `--quiet`
   .
