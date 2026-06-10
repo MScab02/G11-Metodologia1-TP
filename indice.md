@@ -1,4 +1,4 @@
-Introducción
+# Introducción
 
 Este repositorio fue desarrollado como parte del Trabajo Práctico de Git para la materia Metodología de Sistemas I.
 
@@ -28,7 +28,7 @@ A continuación se encuentran las explicaciones de los distintos comandos utiliz
 - [Estadísticas del Repositorio](estadisticas.md)
 - [Uso de Inteligencia Artificial](IA.md)
 
-Integrantes:
--matko
--matias
+# Integrantes:
+- matko
+- matias
 -
