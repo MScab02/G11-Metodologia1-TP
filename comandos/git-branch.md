@@ -56,7 +56,7 @@ No imprime newline despues de referencias formateadas donde dicho formato se exp
 
 - `--column[=<options>]` y `--no-column`
 
-Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`,
+Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`.
 
 - `--sort=<key>`
   Ordena las ramas segun la clave especificada en `<key>`. Algunas claves comunes son refname, committerdate y authourdate y mas opciones que se pueden encontrar aqui https://git-scm.com/docs/git-for-each-ref .
@@ -65,19 +65,19 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Muestra exclusivamente las ramas remotas.
 
 - `-a` y `--all`
-  Muestra ramas remotas y locales
+  Muestra ramas remotas y locales.
 
 - `-l` y `--list`
   Lista las ramas que coinciden con un patron especificado. Si no se proporciona un patron, muestra todas las ramas locales.
 
 - `--show-current`
-  Muestra unicamente el nombre de la rama actual
+  Muestra unicamente el nombre de la rama actual.
 
 - `-v`, `-vv` y `--verbose`
-  Muestra informacion adicional sobre cada rama como el ultimo commit de la misma, -vv tambien muestra informacion sobre la rama remota vinculada
+  Muestra informacion adicional sobre cada rama como el ultimo commit de la misma, -vv tambien muestra informacion sobre la rama remota vinculada.
 
 - `-q` y `--quiet`
-  .
+  Suprime mensajes informativos mostrando solo la salida esencial.
 
 - `--abbrev=<n>`
   .
