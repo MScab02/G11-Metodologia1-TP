@@ -92,7 +92,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Elimina configuracion de seguimiento remoto de una rama.
 
 - `--edit-description`
-  .
+  Permite editar o agregar una descripcion textual a una rama
 
 --contains [<commit>]
 .
