@@ -6,113 +6,105 @@ El comando **`git branch`** se utiliza para verificar la rama en la que estas, m
 
 ## Sintaxis y parámetros
 
-### -d --delete
+- `-d` y `--delete`
 
-Los parámetros **`d`** y **`--delete`** borran ramas que no tienen cambios sin actualizar o en **`HEAD`** con --track o **`--set-upstream-to`**.
+Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin actualizar o en `HEAD` con --track o `--set-upstream-to`.
 
-### --create-reflog
+- `--create-reflog`
 
-"reflog" significando registro de referencias en español, crea una bitacora de referencias que registra los cambios del puntero hasheadas con expresiones basadas en sha1 como **`<branch-name>@{yesterday}`**. En general, este comando no es necesario activarlo en git's que no son bare-bone debido a que esta activado naturalmente por default.
+"reflog" significando registro de referencias en español, crea una bitacora de referencias que registra los cambios del puntero hasheadas con expresiones basadas en sha1 como `<branch-name>@{yesterday}`. En general, este comando no es necesario activarlo en git's que no son bare-bone debido a que esta activado naturalmente por default.
 
-### -m --move
+- `-m` y `--move`
 
 Mueve o renombra una rama con su configuración y reflog.
 
-### -c --copy
+- `-c` y `--copy`
 
 Copia una rama con su configuración y reflog.
 
-### -f --force
+- `-f` y `--force`
 
-Reinicia **`<branch-name>`** hasta su **`<start-point>`** aun si **`<start-point>`** existe aun. Si se usa en combinacion con **`-d`** o **`--delete`** te permite borrar una rama ignorando el estado de union. en combinacion con **`-m`** o **`--move`** te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, **`-c`** o **`--copy`**.
+Reinicia `<branch-name>` hasta su `<start-point>` aun si `<start-point>` existe aun. Si se usa en combinacion con `-d` o `--delete` te permite borrar una rama ignorando el estado de union. en combinacion con `-m` o `--move` te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, `-c` o `--copy`.
 
-### -D
+- `-D`
 
 Atajo para `--delete --force`.
 
-### -M
+- `-M`
 
 Atajo para `--move --force`
 
-### -C
+- `-C`
 
 Atajo para `--copy --force`
 
-### --color[=<when>]
+- `--color[=<when>]`
 
-Colorea ramas para resaltar ramas activas, locales y remotas. El valor **`[=<when>]`** puede ser **always**, **auto** o **never**.
+Colorea ramas para resaltar ramas activas, locales y remotas. El valor `[=<when>]` puede ser **always**, **auto** o **never**.
 
-### --no-color
+- `--no-color`
 
-Elimina el color de las ramas de la misma forma que **`--color=never`**.
+Elimina el color de las ramas de la misma forma que `--color=never`.
 
-### -i --ignore-case
+- `-i --ignore-case`
 
 Es un parametro que te permite ignorar mayusculas filtrando ramas.
 
-### --omit-empty
+- `--omit-empty`
 
 No imprime newline despues de referencias formateadas donde dicho formato se expande al string vacio.
 
-### --column[=<options>] --no-column
+- `--column[=<options>]` y `--no-column`
 
-Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con **`[=<options>]`**, es equivalente a **`--no-column`** y reactivar con **`--column`**,
+Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`,
 
---sort=<key>
-.
+- `--sort=<key>`
+  .
 
--r
---remotes
-.
+- `-r` y `--remotes`
+  .
 
--a
---all
-.
+- `-a` y `--all`
+  .
 
--l
---list
-.
+- `-l` y `--list`
+  .
 
---show-current
-.
+- `--show-current`
+  .
 
--v
--vv
---verbose
-.
+- `-v`, `-vv` y `--verbose`
+  .
 
--q
---quiet
-.
+- `-q` y `--quiet`
+  .
 
---abbrev=<n>
-.
+- `--abbrev=<n>`
+  .
 
---no-abbrev
-.
+- `--no-abbrev`
+  .
 
--t
---track[=(direct|inherit)]
-.
+- `-t --track[=(direct|inherit)]`
+  .
 
---no-track
-.
+- `--no-track`
+  .
 
---recurse-submodules
-.
+- `--recurse-submodules`
+  .
 
---set-upstream
-.
+- `--set-upstream`
+  .
 
--u <upstream>
---set-upstream-to=<upstream>
-.
+- `-u <upstream>` y `--set-upstream-to=<upstream>`
+  .
 
---unset-upstream
-.
+- `--unset-upstream`
+  .
 
---edit-description
-.
+- `--edit-description`
+  .
 
 --contains [<commit>]
 .
