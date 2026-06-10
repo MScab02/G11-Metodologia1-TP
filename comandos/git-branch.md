@@ -2,13 +2,13 @@
 
 ## Descripción
 
-El comando **`git branch`** se utiliza para verificar la rama en la que estas, mostrar la lista de ramas locales y remotas, agregar ramas y eliminarlas.
+El comando **`git branch`** se utiliza para verificar la rama en la que estas, mostrar la lista de ramas locales y remotas, agregar ramas y eliminarlas. Tambien permite configurar relaciones de tracking y consultar información sobre ramas existentes.
 
 ## Sintaxis y parámetros
 
 - `-d` y `--delete`
 
-Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin actualizar o en `HEAD` con --track o `--set-upstream-to`.
+Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin fusionar en `HEAD` con --track o `--set-upstream-to`.
 
 - `--create-reflog`
 
