@@ -24,7 +24,7 @@ Copia una rama con su configuración y reflog.
 
 - `-f` y `--force`
 
-Reinicia `<branch-name>` hasta su `<start-point>` aun si `<start-point>` existe aun. Si se usa en combinacion con `-d` o `--delete` te permite borrar una rama ignorando el estado de union. en combinacion con `-m` o `--move` te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, `-c` o `--copy`.
+Reinicia `<branch-name>` hasta su `<start-point>`. Si se usa en combinacion con `-d` o `--delete` te permite borrar una rama ignorando el estado de union. en combinacion con `-m` o `--move` te permite renombrar la rama aun si ya existe una rama que tiene ese mismo nombre, `-c` o `--copy`.
 
 - `-D`
 
@@ -59,16 +59,16 @@ No imprime newline despues de referencias formateadas donde dicho formato se exp
 Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`,
 
 - `--sort=<key>`
-  .
+  Ordena las ramas segun la clave especificada en `<key>`. Algunas claves comunes son refname, committerdate y authourdate y mas opciones que se pueden encontrar aqui https://git-scm.com/docs/git-for-each-ref .
 
 - `-r` y `--remotes`
-  .
+  Muestra exclusivamente las ramas remotas.
 
 - `-a` y `--all`
-  .
+  Muestra ramas remotas y locales
 
 - `-l` y `--list`
-  .
+  Lista las ramas que coinciden con un patron especificado. Si no se proporciona un patron, muestra todas las ramas locales.
 
 - `--show-current`
   .
