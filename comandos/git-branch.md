@@ -74,13 +74,13 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Muestra los identificadores SHA-1 sin ser abreviados.
 
 - `-t --track[=(direct|inherit)]`
-  Configura la nueva rama para que rastree una rama remota. Con **direct**, rastrea directamente la rama especificada. Con **inherit**, hereda la configuracion de seguimiento de la rama de origen
+  Configura la nueva rama para que rastree una rama remota. Con **direct**, rastrea directamente la rama especificada. Con **inherit**, hereda la configuracion de seguimiento de la rama de origen.
 
 - `--no-track`
-  .
+  Crea una rama sin configurar seguimiento hacia ninguna rama remota.
 
 - `--recurse-submodules`
-  .
+  Si el repositorio utiliza submodulos, crea ramas correspondientes tambien dentro de los submodulos
 
 - `--set-upstream`
   .
