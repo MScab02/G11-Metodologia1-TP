@@ -104,10 +104,10 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Muestra las ramas cuyos cambios ya fueron fusionados en el commit indicado `[<commit>]` o en HEAD por defecto.
 
 - `--no-merged [<commit>]`
-  .
+  Muestra las ramas cuyos cambios aún no fueron fusionados en el commit indicado `[<commit>]` o en HEAD.
 
 - `--points-at <object>`
-  .
+  Muestra ramas cuyos punteros apuntan exactamente al objeto `<object>` especificado.
 
 - `--format <format>`
   .
