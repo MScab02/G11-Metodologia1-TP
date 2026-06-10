@@ -2,7 +2,15 @@
 
 ## Descripción
 
-El comando `git rebase...` permite "mover" commits de una rama, cambiando el punto de inicio de una rama hasta el último commit de otra rama. Esto se logra creando una copia de los commits de una rama, y pegandolos más adelante en la historia, la principal función de esto es evitar mergeos innecesarios y mantener un historial más lineal.
+El comando `git rebase` toma los commits de tu rama actual y los reaplica
+sobre el último commit de otra rama, creando un historial lineal. A
+diferencia de `git merge`, no crea un commit de fusión sino que reescribe
+el historial haciendo que parezca que desarrollaste tus cambios justo al
+final de la otra rama.
+
+Esto es útil para mantener el historial de commits ordenado y fácil de leer,
+especialmente en proyectos colaborativos donde un historial limpio hace más
+fácil entender qué cambió y por qué.
 
 Por ejemplo, supongamos que tenemos las ramas `main` y `dev`.
 
@@ -60,32 +68,13 @@ Por cada commit en el que Git detecte un conflicto, el usuario tendrá que utili
 
 ## Diferencias entre mergear y rebasar
 
-La principal diferencia entre un `git merge...` y un `git rebase...` es su comportamiento en el historial del repositorio.
-
-Un merge mantendrá en la historia la existencia de ambas ramas, siendo unidas en algún punto por un commit que une ambas ramas:
-
-```
-// 'M' es el commit donde se mergean las ramas
-A --- B --- C ------ M --- (rama1)
-       \            /
-        D -------- E (rama2)
-```
-
-En cambio, un rebase unifica las ramas, perdiendo el historial de la rama desde la que se hace el rebase, tampoco se crea un commit de merge en el proceso.
-
-```
-A --- B --- C --- D (rama1)
-       \
-        E --- F --- G (rama2)
-
-|
-| // -> git rebase rama2 rama1
-v
-
-A --- B --- C --- D --- E' --- F' --- G' (rama1)
-```
-
-La `rama2` desaparece y pasa a formar parte de la `rama1`, como si la primera nunca se hubiese creado.
+|                     | `git merge`              | `git rebase`          |
+| ------------------- | ------------------------ | --------------------- |
+| Historial           | Conserva todas las ramas | Lineal y limpio       |
+| ------------------- | ------------------------ | --------------------- |
+| Commit extra        | Crea un merge commit     | No crea commits extra |
+| ------------------- | ------------------------ | --------------------- |
+| Reescribe historial | No                       | Sí                    |
 
 ## Comandos similares
 
@@ -100,3 +89,4 @@ La `rama2` desaparece y pasa a formar parte de la `rama1`, como si la primera nu
 - `git pull --rebase`
 
   Es una combinación de los comandos `git fetch` y `git rebase origin/<rama>`, usado para actualizar una rama sin realizar un commit de merge innecesario.
+
