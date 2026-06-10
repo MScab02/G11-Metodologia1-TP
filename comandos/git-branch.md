@@ -113,10 +113,10 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Permite personalizar el formato de salida utilizando especificadores de formato.
 
 - `<branch-name>`
-  .
+  Nombre de la rama que se desea crear, modificar, eliminar o consultar.
 
 - `<start-point>`
-  .
+  Commit, etiqueta o rama desde donde se creará la nueva rama.
 
 - `<old-branch>`
-  .
+  Nombre de una rama existente utilizada al renombrar (-m) o copiar (-c) una rama.
