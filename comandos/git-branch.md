@@ -80,8 +80,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Suprime mensajes informativos mostrando solo la salida esencial.
 
 - `--abbrev=<n>`
-  .
-
+  Muestra los identificadores SHA-1 abreviados con `<n>` caracteres.
 - `--no-abbrev`
   .
 
