@@ -101,7 +101,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Emite las ramas que tienen el commit especificado en `[<commit>]`
 
 - `--merged [<commit>]`
-  .
+  Muestra las ramas cuyos cambios ya fueron fusionados en el commit indicado `[<commit>]` o en HEAD por defecto.
 
 - `--no-merged [<commit>]`
   .
