@@ -89,7 +89,7 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Establece la rama remota indicada en `<upstream>` como rama de seguimiento de la rama actual.
 
 - `--unset-upstream`
-  .
+  Elimina configuracion de seguimiento remoto de una rama.
 
 - `--edit-description`
   .
