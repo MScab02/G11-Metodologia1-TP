@@ -92,31 +92,31 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
   Elimina configuracion de seguimiento remoto de una rama.
 
 - `--edit-description`
-  Permite editar o agregar una descripcion textual a una rama
+  Permite editar o agregar una descripcion textual a una rama.
 
---contains [<commit>]
-.
+- `--contains [<commit>]`
+  Muestra las ramas que tienen el commit especificado en `[<commit>]`
 
---no-contains [<commit>]
-.
+- `--no-contains [<commit>]`
+  Emite las ramas que tienen el commit especificado en `[<commit>]`
 
---merged [<commit>]
-.
+- `--merged [<commit>]`
+  .
 
---no-merged [<commit>]
-.
+- `--no-merged [<commit>]`
+  .
 
---points-at <object>
-.
+- `--points-at <object>`
+  .
 
---format <format>
-.
+- `--format <format>`
+  .
 
-<branch-name>
-.
+- `<branch-name>`
+  .
 
-<start-point>
-.
+- `<start-point>`
+  .
 
-<old-branch>
-.
+- `<old-branch>`
+  .
