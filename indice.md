@@ -6,24 +6,27 @@ El objetivo del trabajo es aplicar los conceptos vistos durante la cursada relac
 
 A continuación se encuentran las explicaciones de los distintos comandos utilizados durante la cursada, junto con otros archivos complementarios requeridos por la consigna.
 
-Comandos de Git
-Git Init
-Git Clone
-Git Status
-Git Add
-Git Commit
-Git Push
-Git Pull
-Git Branch
-Git Checkout
-Git Merge
-Git Rebase
-Git Reset
-Git Revert
-Resolución de Conflictos
-Archivos complementarios
-Estadísticas del Repositorio
-Uso de Inteligencia Artificial
+# comandos 
+
+- [Git Init](comandos/git-init.md)
+- [Git Clone](comandos/git-clone.md)
+- [Git Status](comandos/git-status.md)
+- [Git Add](comandos/git-add.md)
+- [Git Commit](comandos/git-commit.md)
+- [Git Push](comandos/git-push.md)
+- [Git Pull](comandos/git-pull.md)
+- [Git Branch](comandos/git-branch.md)
+- [Git Checkout](comandos/git-checkout.md)
+- [Git Merge](comandos/git-merge.md)
+- [Git Rebase](comandos/git-rebase.md)
+- [Git Reset](comandos/git-reset.md)
+- [Git Revert](comandos/git-revert.md)
+- [Resolución de Conflictos](comandos/git-conflictos.md)
+
+# Archivos complementarios
+
+- [Estadísticas del Repositorio](estadisticas.md)
+- [Uso de Inteligencia Artificial](IA.md)
 
 Integrantes:
 -matko
