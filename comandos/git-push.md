@@ -2,7 +2,9 @@
 
 ## Descripción
 
-El comando `git push...` funciona con repositorios remotos de los proyectos asociados. Actualiza una o más ramas del repositorio remoto con el contenido del repositorio local que no se encuentre ya en el repositorio remoto.
+El comando `git push` se utiliza para subir tus commits locales a un repositorio remoto como GitHub, GitLab o Bitbucket. En pocas palabras, sincroniza tu historial de trabajo local con el repositorio remoto para que tus cambios queden respaldados y accesibles para otros colaboradores.
+
+Cuando realizás cambios y los guardás con `git commit`, estos existen solo en tu máquina. Al ejecutar `git push`, Git compara lo que tenés en tu rama local con la rama correspondiente en el servidor y envía los commits que faltan actualizando la rama remota.
 
 ## Sintaxis y parámetros
 
@@ -22,19 +24,48 @@ Si es la primera vez que se envían cambios del repositorio local al repositorio
 
 El parámetro `[<opción>]` permite modificar el comportamiento del comando insertando una opción válida. Las más comunes y utilizadas son:
 
-- `-u` `--set-upstream`
+- `-u` / `--set-upstream`  
+  Establece la rama remota como upstream de la rama local. Solo se
+  necesita la primera vez que se sube una rama nueva.
 
-  Explicado anteriormente, rastrea la rama local en el repositorio remoto, de forma que en el futuro poder empujar y traer cambios del repositorio remoto sin parámetros adicionales.
+- `--force` / `-f`  
+  Fuerza la subida aunque haya conflictos con el historial remoto.
+  Hay que usarlo con cuidado ya que puede sobreescribir el trabajo
+  de otros.
 
-- `-f` `--force`
+- `--force-with-lease`  
+  Similar a `--force` pero más seguro, ya que verifica que nadie más
+  haya subido cambios antes de forzar.
 
-  Permite forzar la actualización de una rama remota, saltandose los errores que puedan estar impidiendo que los cambios se empujen.
+- `--tags`  
+  Sube también las etiquetas (tags) locales al remoto.
 
-  Esta acción puede borrar commits del repositorio remoto, asique debe usarse con cuidado.
+- `--delete`  
+  Elimina una rama en el repositorio remoto.
+
+## Usos más comunes
+
+**Subir una rama por primera vez:**
+
+```
+git push -u origin <nombre-de-la-rama>
+```
+
+**Subir cambios en una rama ya configurada:**
+
+```
+git push
+```
+
+**Eliminar una rama remota:**
+
+```
+git push origin --delete <nombre-de-la-rama>
+```
 
 ## Errores comunes
 
-Una de las limitantes más a la hora de enviar cambios al repositorio remoto, es que Git no permite hacerlo si detecta que la rama que se intenta actualizar está **adelantado en el tiempo** en cuanto a commits, es decir, que el repositorio local no está al día con los últimos cambios realizados, posiblemente porque otro desarrollador llevó cambios a esa rama.
+Una de las limitantes más comunes a la hora de enviar cambios al repositorio remoto, es que Git no permite hacerlo si detecta que la rama que se intenta actualizar está **adelantado en el tiempo** en cuanto a commits, es decir, que el repositorio local no está al día con los últimos cambios realizados, posiblemente porque otro desarrollador llevó cambios a esa rama.
 
 Lo más recomendable es buscar cambios hechos en el repositorio remoto ejecutando el comando `git fetch`, y en caso de haber cambios en la rama, traerlos con `git pull`, comando que se desarrollará en su propio documento.
 
@@ -42,6 +73,7 @@ También se puede forzar la actualización con el parámetro `-f` mencionado má
 
 ## Comandos similares
 
-En Git, no existen comandos que realicen la misma acción que `git push`, pero vale mencionar a `git pull`, el cual vendría siendo su "antónimo".
+- `git pull` — operación inversa, trae los cambios del remoto al local.
+- `git commit` — paso previo necesario antes de hacer un push.
+- `git fetch` — descarga información del remoto sin fusionar cambios.
 
-`git pull`, a la inversa de `git push`, sirve para comunicarse con el repositorio remoto y traer los cambios de una rama de elección al repositorio local del usuario, de esta forma, se pueden actualizar los archivos locales con las últimas modificaciones realizadas, sumamente importante para conocer qué han hecho nuestros compañeros y poder trabajar mejor organizado.

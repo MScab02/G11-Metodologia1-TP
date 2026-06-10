@@ -1,30 +1,38 @@
 # **9. git checkout**
 
-## Descripción:
+El comando `git checkout` se utiliza principalmente para navegar entre 
+diferentes versiones, ramas o commits en el repositorio. Al ejecutarlo, 
+Git actualiza los archivos del directorio de trabajo para que coincidan 
+con el estado exacto de la versión solicitada, moviendo el puntero HEAD 
+hacia allí.
 
-El comando `git checkout...` tiene **dos funciones principales**:
-
-1. **Cambiar entre las ramas** que se encuentren de manera local, en el commit al que se apunte actualmente en esa rama, que por lo general, suele ser el último, usando...
-
-```
-git checkout <rama>
-```
-
-...sustituyendo `<rama>` por el nombre exacto de la rama a la que se quiere saltar.
-
-2. **Saltar a otra versión de un archivo**, especificando el hash del commit y el archivo:
-
-```
-git checkout <commit> <archivo>
-```
+Es uno de los comandos más versátiles de Git, ya que permite tanto cambiar 
+de rama como restaurar archivos a un estado anterior.
 
 ## Sintaxis y parámetros
 
-Mencionado anteriormente, la forma más común de usar el comando es `git checkout <rama>` para cambiar entre las ramas locales, pero esto se puede ver impedido por cambios no commiteados todavía, ya que pueden perderse, de forma que **no será permitido cambiar a otra rama hasta que los cambios realizados sean guardados con un commit**.
+```
+git checkout [<parámetros>] [<rama o commit>] [--] [<archivo>]
+```
 
 Usar el comando sin especificar una rama o un commit solo devolverá información respecto a la rama actual.
 
-Dentro del comando general, existen varios parámetros que utilizan su propia sintaxis para realizar diferentes acciones, algunos de los más comúnes son:
+## Parámetros principales
+
+- `-b <nombre>`  
+  Crea una rama nueva y se mueve a ella automáticamente.
+
+- `-B <nombre>`  
+  Igual que `-b` pero si la rama ya existe, la resetea al commit actual.
+
+- `--detach`  
+  Mueve HEAD a un commit específico sin estar en ninguna rama.
+
+- `-f` / `--force`  
+  Fuerza el cambio de rama aunque haya cambios sin commitear, 
+  descartándolos.
+
+## Usos más comunes
 
 - `git checkout -b <nueva-rama> [<punto-de-inicio>]`
 
@@ -32,23 +40,14 @@ Dentro del comando general, existen varios parámetros que utilizan su propia si
 
   Por defecto, la nueva rama iniciará con los contenidos que hayan en la rama en la que se esté posicionado a la hora de ejecutar el comando, **como si se tratara de una copia**, pero es posible especificar el hash del commit que se quiera utilizar como punto de inicio luego del nombre de la rama.
 
-- `git checkout -f <rama>`
+- `git checkout (<rama>|<commit>)
 
-  Fuerza el cambio de rama, incluso si hay cambios que no se hayan guardado con un commit.
+  Permite cambiar entre ramas ingresando el nombre de una rama, o entre commits especificando el hash de un commit específico.
+  
+- `git checkout -- <archivo>`
 
-- `git checkout (-m/--merge) <rama>`
+  Descarta los cambios locales de ese archivo y lo vuelve al estado del último commit.
 
-  Permite realizar un merge temporal de los archivos modificados con la rama especificada, los cambios en la rama actual se mergean en la rama destino.
-
-  Funciona como cualquier merge: en caso de no poder combinarse de forma automática, se deberán solucionar los conflictos de forma manual.
-
-- `git checkout <rama/commit> [--] <ruta>`
-
-  Reemplaza los archivos especificados en la ruta por la versión de esos archivos que se encuentran en la rama o commit especificados, añadiendolos al staging area.
-
-- `git checkout (-q/--quiet) <rama>`
-
-  Cambia de rama sin mensajes informativos en consola.
 
 ## Concepto de `HEAD` y `DETACHED HEAD`
 
@@ -62,7 +61,7 @@ Cuando el `HEAD` deja de apuntar a una rama y pasa a apuntar a un commit (`HEAD 
 - `git switch...`
 
   Se trata de un comando introducido mucho despues de `git checkout...`, que podría considerarse como su sucesor moderno. Su intención es ser de una sintaxis más clara, reduciendo errores y evitando confusiones a la hora de cambiar de rama o restaurar archivos.
-
+  
 - `git restore...`
 
   Se utiliza para restaurar archivos y descartar cambios, sirviendo como una alternativa con sintaxis más clara de `git checkout <rama/commit> [--] <ruta>`.
@@ -70,3 +69,8 @@ Cuando el `HEAD` deja de apuntar a una rama y pasa a apuntar a un commit (`HEAD 
 - `git branch`
 
   Se puede utilizar para crear ramas nuevas, al igual que `git checkout -b <nueva-rama>`.
+
+_Nota_
+  > A partir de versiones más recientes de Git, se recomienda usar `git switch` 
+  > para cambiar de rama y `git restore` para restaurar archivos, ya que dividen 
+  > las responsabilidades de `git checkout` en comandos más claros y específicos.
