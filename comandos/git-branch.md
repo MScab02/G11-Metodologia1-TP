@@ -1,10 +1,16 @@
-# **1. git add**
+# **git branch**
 
 ## Descripción
 
-El comando **`git branch`** se utiliza para verificar la rama en la que estas, mostrar la lista de ramas locales y remotas, agregar ramas y eliminarlas. Tambien permite configurar relaciones de tracking y consultar información sobre ramas existentes.
+El comando **`git branch`** se utiliza para verificar la rama en la que estas, mostrar la lista de ramas locales y remotas, agregar ramas y eliminarlas. Tambien permite configurar relaciones de tracking y consultar información sobre ramas existentes. Una rama es una línea de desarrollo independiente, lo que permite trabajar en nuevas funcionalidades o hacer pruebas sin afectar el código principal.
 
 ## Sintaxis y parámetros
+
+```
+git branch [<parámetros>] [<nombre>]
+```
+
+### Parámetros
 
 - `-d` y `--delete`
   Los parámetros `d` y `--delete` borran ramas que no tienen cambios sin fusionar en `HEAD` con --track o `--set-upstream-to`.
@@ -44,7 +50,7 @@ El comando **`git branch`** se utiliza para verificar la rama en la que estas, m
 
 - `--column[=<options>]` y `--no-column`
 
-Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`.
+  Muestra las ramas listadas en columnas, se puede configurar para que no se muestra de tal forma con **always** o **never** con `[=<options>]`, es equivalente a `--no-column` y reactivar con `--column`.
 
 - `--sort=<key>`
   Ordena las ramas segun la clave especificada en `<key>`. Algunas claves comunes son refname, committerdate y authourdate y mas opciones que se pueden encontrar aqui https://git-scm.com/docs/git-for-each-ref .
@@ -120,3 +126,9 @@ Muestra las ramas listadas en columnas, se puede configurar para que no se muest
 
 - `<old-branch>`
   Nombre de una rama existente utilizada al renombrar (-m) o copiar (-c) una rama.
+
+## Comandos relacionados
+
+- `git checkout` / `git switch` — para cambiar a una rama existente.
+- `git merge` — para fusionar los cambios de una rama con otra.
+

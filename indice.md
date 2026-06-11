@@ -32,3 +32,21 @@ A continuación se encuentran las explicaciones de los distintos comandos utiliz
 - matko
 - matias
 -
+- Índice
+  - [README](./README.md)
+  - [Git Init](./comandos/git-init.md)
+  - [Git Clone](./comandos/git-clone.md)
+  - [Git Status](./comandos/git-status.md)
+  - [Git Add](./comandos/git-add.md)
+  - [Git Commit](./comandos/git-commit.md)
+  - [Git Push](./comandos/git-push.md)
+  - [Git Pull](./comandos/git-pull.md)
+  - [Git Branch](./comandos/git-branch.md)
+  - [Git Checkout](./comandos/git-checkout.md)
+  - [Git Merge](./comandos/git-merge.md)
+  - [Git Rebase](./comandos/git-rebase.md)
+  - [Git Reset](./comandos/git-reset.md)
+  - [Git Revert](./comandos/git-revert.md)
+  - [Resolución de Conflictos](./comandos/git-conflictos.md)
+  - [Estadísticas del Repositorio](./estadisticas.md)
+  - [Uso de Inteligencia Artificial](./IA.md)
