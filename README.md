@@ -28,9 +28,10 @@ G11-Metodologia1-TP
 │  ├ git-revert.md
 │  └ git-status.md
 ├ imagenes
-│  ├ conflicto-gitbash.jpg
-│  ├ conflicto-vscode.jpg
-│  └ hash-merge.jpg
+│ ├ conflicto-gitbash.jpg
+│ ├ conflicto-vscode.jpg
+│ ├ hash-merge.jpg
+│ └ revert-gitbash.jpg
 ├ estadisticas.md
 ├ ia.md
 ├ indice.md
