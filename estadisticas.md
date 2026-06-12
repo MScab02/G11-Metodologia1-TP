@@ -54,3 +54,39 @@ Adjuntar captura de pantalla (avisar)
 **Comando utilizado**
 
 `git log --all --grep="conflict"`
+
+
+## Conflictos registrados
+
+Cantidad de conflictos producidos: 1.
+
+Durante la integración de la rama matias con la rama dev se produjo un conflicto en el archivo indice.md, el cual fue resuelto manualmente.
+
+Hash del commit asociado:
+
+f7df376
+
+Evidencias
+
+![Conflicto VS Code](imagenes/conflicto-vscode.jpg)
+
+![Conflicto Git Bash](imagenes/conflicto-gitbash.jpg)
+
+## Uso de git revert
+
+Se creó un commit de prueba con el objetivo de demostrar el funcionamiento del comando `git revert`.
+
+Commit creado:
+- 20524df - feat: agregar archivo de prueba para revert
+
+Posteriormente se ejecutó:
+
+git revert 20524df
+
+Git generó automáticamente un nuevo commit que deshace los cambios sin alterar el historial:
+
+- ea82bbf - Revert "feat: agregar archivo de prueba para revert"
+
+Evidencias
+
+![Revert](imagenes/revert-gitbash.jpg)
